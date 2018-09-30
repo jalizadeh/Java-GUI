@@ -15,9 +15,12 @@ public class CounterView extends JFrame {
 	JButton increment;
 	JButton decrement;
 	JLabel value;
+	CounterModel model;
 	
-	
-	public CounterView() {
+	public CounterView(CounterModel model) {
+		//View has connection with Model
+		this.model = model;
+		
 		//no need to define JFrame object
 		setTitle("Counter");
 		setSize(300, 300); //pixels
@@ -55,9 +58,17 @@ public class CounterView extends JFrame {
 		add(decrement, BorderLayout.SOUTH);
 		add(value, BorderLayout.CENTER);
 				
+		//value.setText(String.valueOf(model.getValue()));
+		//but it happens every time user interacts, so let`s put it in a method
+		update();
 		
 		setVisible(true);
 		
+	}
+	
+	
+	void update() {
+		value.setText(String.valueOf(model.getValue()));
 	}
 	
 }

@@ -9,7 +9,7 @@ public class CounterModel {
 	
 	public void decrement() {
 		//it can prevent decreasing more than 0 [optional]
-		//if(value == 0) return;
+		if(value == 0) return;
 		
 		value--;
 	}

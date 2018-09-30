@@ -21,7 +21,7 @@ public class CounterApp {
 		CounterModel model = new CounterModel();
 		//OR
 		//Solution #2: define the View class
-		CounterView view = new CounterView();
+		CounterView view = new CounterView(model);
 		
 		CounterControl control = new CounterControl(model, view);
 	}
