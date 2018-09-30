@@ -1,6 +1,6 @@
 package counter;
 
-public class Counter {
+public class CounterModel {
 	private int value;
 	
 	public void increment() {
