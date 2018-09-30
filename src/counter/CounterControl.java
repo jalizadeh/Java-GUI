@@ -28,12 +28,12 @@ public class CounterControl implements ActionListener{
 	
 	public void doIncrement() {
 		model.increment();
-		view.update();
+		//view.update();
 	}
 	
 	public void doDecrement() {
 		model.decrement();
-		view.update();
+		//view.update();
 	}
 
 	

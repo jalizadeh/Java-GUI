@@ -62,6 +62,10 @@ public class CounterView extends JFrame {
 		//but it happens every time user interacts, so let`s put it in a method
 		update();
 		
+		//by adding this line, we don`t need anymore the "view.update()" in
+		//in CounterControll->doIn... & doDec...
+		model.addObserver( m -> update());
+		
 		setVisible(true);
 		
 	}
